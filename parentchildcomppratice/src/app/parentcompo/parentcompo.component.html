@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <header>
+        <h2 class="text-center text-white bg-danger mt-1 p-2"><span>Shopping Cart</span></h2>
+    </header>
+    <div class="row ">
+        <div class="col-3">
+            <h2>Browse Categories</h2>
+            <app-filter (FilterClick)="FilterChanged($event)" [AllProductCategories]="AllProductCategories" 
+            [ElectronicProductCategories]="ElectronicProductCategories" [JeweleryProductCategories]="JeweleryProductCategories"
+            [MensProductCategories]="MensProductCategories" [WomensProductCategories]="WomensProductCategories"
+            ></app-filter>
+        </div>
+        <div class="col-9">
+            <h2 class="text-center text-dark "> Products Catelog</h2>
+            <div class="d-flex flex-wrap overflow-auto justify-content-between " style="height: 500px;">
+                <div  *ngFor="let item of Products"  class="card m-2 p-2" style="width: 200px;">
+                    <img [src]="item.image" class="card-img-top" style="height: 150;">
+                    <div class="card-header" style="height: 180px;">    
+                        {{item.title}}
+                    </div>
+                    <div class="card-body">
+                        {{item.category}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container-fluid bg-dark text-white p-2" style="height: 500px;">
+    <h2>Parent compo</h2>
+    <!-- <app-child></app-child> -->
+    <P> Parent Component <button (click)="SendMessageToChild()">Send Message</button>
+    <span>{{MessageFromChild}}</span>
+    </P>
+    <app-child  (ChildCompoEventClick)="ReciveMessageFromChild($event)" [ProductDetails]="ProductDetails" [MessageFromParent]="MessageToChild" ></app-child>
+</div>                                                                                                                                                                                     
