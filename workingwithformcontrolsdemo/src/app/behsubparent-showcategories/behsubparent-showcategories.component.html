@@ -1,0 +1,17 @@
+<div class="Container justify-content-center" [formGroup]="reactiveForm">
+    <h4 class="text-center">Behaviour Subject</h4>
+    <div class="form-group row justify-content-center">
+        <label class="text-center">Categories</label>
+        <select class="btn col-sm-10 dropdown-toggle btn-outline-info"
+        formControlName="behData" (change)="updateInputs()"
+        data-toggle="dropdown" placeholder="select" appearance="outline">
+            <option *ngFor="let category of allCategories"  [ngValue]="category">
+                {{category}}
+            </option>
+        </select>
+    </div>
+</div>
+    <div class="form-group row">
+        <app-behsubchild-showproducts></app-behsubchild-showproducts>
+    </div>
+

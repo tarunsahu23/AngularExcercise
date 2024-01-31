@@ -1,0 +1,17 @@
+<div class="container">
+    <h4>Product Data Will be Show Below once Category is selected</h4>
+    <table border="1" id="customers"
+    *ngIf="categoryWiseProduct.length != 0">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        <tr
+        *ngFor="let prod of categoryWiseProduct">
+            <td>{{prod.title}}</td>
+            <td>{{prod.price}}</td>
+            <td>{{prod.description}}</td>
+        </tr>
+    </table>
+</div>

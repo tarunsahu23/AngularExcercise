@@ -1,1 +1,17 @@
-<p>behcomp2 works!</p>
+<div class="card text-center">
+    <div class="card-header">
+        Component 2
+    </div>
+    <div class="card-body">
+        <p>
+            User name : <span class="fw-bold">{{userName}}</span>
+        </p>
+        <input type="text" placeholder="Update Name" #uname>
+        <!-- uname == template refrence variable -->
+    </div>
+    <div class="card-footer text muted">
+        <button class="btn btn-info" (click)="updateUserName(uname)">
+            Update
+        </button>
+    </div>
+</div>

@@ -1,1 +1,22 @@
-<p>behmaincompo works!</p>
+<h2 class="text-center">Cross Component Communication</h2>
+<div class="container-fluid border mt-5">
+    <div class="d-flex justify-content-center mb-1">
+        <h1 class="text-center">
+            User Name is : <span class=" text-info">{{userName}}</span> 
+        </h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <app-behcomp1></app-behcomp1>
+        </div>
+        <div class="col-md-6 mb-4">
+            <app-behcomp2></app-behcomp2>
+        </div>
+        <div class="col-md-6 mb-4">
+            <app-behcomp3></app-behcomp3>
+        </div>
+        <div class="col-md-6 mb-4">
+            <app-behcomp4></app-behcomp4>
+        </div>
+    </div>
+</div>
