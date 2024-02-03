@@ -1,0 +1,49 @@
+<div class="container">
+    <h4>Reactive Driven Form-Working With TextBoxes</h4>
+    <form [formGroup]="reactiveForm" >
+            <div class="form-control row mb-3">
+                <label >Product ID</label>
+                <input type="number" formControlName="productId">
+                <span style="color: red" *ngIf="reactiveForm.hasError('required','productId')">Product ID is required</span>
+                <span style="color: red" *ngIf="reactiveForm.hasError('min','productId')">productId min length is 100</span>
+            </div>
+            <div class="form-control row mb-3">
+                <label >Product Name</label>
+                <input type="number" formControlName="productName">
+                <span style="color: red" *ngIf="reactiveForm.hasError('required','productName')">Product Name is required</span>
+                <span style="color: red" *ngIf="reactiveForm.hasError('minlength','productName')">productId minlength is 20</span>
+            </div>
+            <div class="form-control row mb-3">
+                <label >Cost</label>
+                <input type="number" formControlName="cost">
+                <span style="color: red" *ngIf="reactiveForm.hasError('required','cost')">cost is required</span>
+                <span style="color: red" *ngIf="reactiveForm.hasError('min','cost')">cost min cost is 500</span>
+            </div>
+            <div class="form-control row mb-3">
+                <label >Quantity</label>
+                <input type="number" formControlName="quantity">
+                <span style="color: red" *ngIf="reactiveForm.hasError('required','quantity')">Quantity is required</span>
+                <span style="color: red" *ngIf="reactiveForm.hasError('min','quantity')">productId min length is 5</span>
+                <span style="color: red" *ngIf="reactiveForm.hasError('max','quantity')">productId max length is 20</span>
+            </div>
+            <div class="form-control row mb-3">
+                <label >Bill Amount</label>
+                <input type="text" formControlName="billAmt">
+            </div>
+
+            <div class="form-control row mb-3">
+                <label >Discount</label>
+                <input type="text" formControlName="Discount">
+            </div>
+
+            <div class="form-control row mb-3">
+                <label >Net Bill Amount</label>
+                <input type="text" formControlName="netBillAmt">
+            </div>
+
+            <div class="form-control row mb-3">
+                <button type="button" [disabled]="!reactiveForm.valid"
+                (click)="calculateVal()">Calculates</button>
+            </div>
+    </form>
+</div>

@@ -1,0 +1,81 @@
+<!-- <div>
+  <h2>Login Page</h2>
+  <form (ngSubmit)="login()" #loginForm="ngForm">
+    <label for="username">Username: </label>
+    <input type="text" id="username" [(ngModel)]="username" name="username" required />
+
+    <label for="password">Password: </label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required />
+
+    <button type="submit">Login</button>
+  </form>
+</div>
+ -->
+
+<!-- 
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<form (ngSubmit)="login()" #loginForm="ngForm" [formGroup]="reactiveForm">
+  <h3>Login Page</h3>
+
+  <div class="form-control row">
+    <label for="username">Username</label>  
+    <input type="text" id="username" formControlName="username"  placeholder="Username">
+    <span style="color: red" *ngIf="reactiveForm.hasError('required','username')">Username is required</span>
+    <span style="color: red" *ngIf="reactiveForm.hasError('min','username')"> min length is 8</span>
+  </div>
+  <hr>
+  <div class="form-control row">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" placeholder="Password">
+    <span style="color: red" *ngIf="reactiveForm.hasError('required','password')">Password is required</span>
+    <span style="color: red" *ngIf="reactiveForm.hasError('min','password')"> min length is 8</span>
+  </div>
+
+  <button type="submit">Log In</button>
+  <div class="social">
+    <div class="go"><i class="fab fa-google"></i>  Google</div>
+    <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+  </div>
+</form> -->
+
+
+<!-- login.component.html -->
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+
+<form (ngSubmit)="login()" #loginForm="ngForm" [formGroup]="reactiveForm">
+  <h3>Login Page</h3>
+
+  <div class="form-control row">
+    <label for="username">Username</label>  
+    <input type="text" id="username" formControlName="username" placeholder="Username">
+    <span style="color: red" *ngIf="reactiveForm.get('username')?.hasError('required') && reactiveForm.get('username')?.touched">
+      Username is required
+    </span>
+    <span style="color: red" *ngIf="reactiveForm.get('username')?.hasError('minlength') && reactiveForm.get('username')?.touched">
+      Min length is 5
+    </span>
+  </div>
+  <hr>
+  <div class="form-control row">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" placeholder="Password">
+    <span style="color: red" *ngIf="reactiveForm.get('password')?.hasError('required') && reactiveForm.get('password')?.touched">
+      Password is required
+    </span>
+    <span style="color: red" *ngIf="reactiveForm.get('password')?.hasError('minlength') && reactiveForm.get('password')?.touched">
+      Min length is 5
+    </span>
+  </div>
+
+  <button type="submit">Log In</button>
+  <div class="social">
+    <div class="go"><i class="fab fa-google"></i> Google</div>
+    <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+  </div>
+</form>

@@ -1,0 +1,28 @@
+{
+    "allowancetypes":[
+        {
+            "name":"HRA" ,
+            "val":10
+        },
+        {
+            "name":"CA" ,
+            "val":20
+        },
+        {
+            "name":"MA" ,
+            "val":30
+        },
+        {
+            "name":"TA" ,
+            "val":40
+        },
+        {
+            "name":"PPF" ,
+            "val":50
+        },
+        {
+            "name":"EPF" ,
+            "val":50
+        }
+    ]
+}
