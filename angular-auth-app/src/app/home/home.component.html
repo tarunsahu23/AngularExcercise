@@ -1,12 +1,14 @@
 <div class="container-fluid">
     <h2 class="text-white text-center md-10">Home Page</h2>
-    <div class="row">
-      <div class="col-10">
+    
+      <div class="w-25 p-3 md-2" >
         <h1><span class="text-white text-center"> Welcome {{username}}</span></h1>
       </div>
-      <div class="col-2">
+      <div class="w-25 p-3">
         <span ><button (click)="logout()">Logout</button></span>
+      </div>
+      <div class="w-25 p-3" >
+        <span><button class="btn btn-danger" (click)="deleteCookie()">Delete Cookie</button></span>
       </div> 
-    </div>
   </div>
   

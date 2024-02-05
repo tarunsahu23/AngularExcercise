@@ -8,9 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './service/auth.service';
 import { CustomdemoService } from './service/customdemo.service';
+import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotfoundcomponent.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, PagenotfoundcomponentComponent, MainpageComponent],
   imports: [
     BrowserModule, 
     FormsModule, 

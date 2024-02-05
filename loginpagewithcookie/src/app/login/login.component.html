@@ -1,0 +1,36 @@
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  
+  <form [formGroup]="reactiveForm"  (ngSubmit)="login()"  >
+    <h3>Login Page</h3>
+  
+    <div class="form-control row">
+      <label for="username">Username</label>  
+      <input type="text" name="Username" formControlName="Username" placeholder="Username">
+      <!-- <span style="color: red" *ngIf="reactiveForm.get('username')?.hasError('required') && reactiveForm.get('username')?.touched">
+        Username is required
+      </span> -->
+      <!-- <span style="color: red" *ngIf="reactiveForm.get('username')?.hasError('minlength') && reactiveForm.get('username')?.touched">
+        Min length is 5
+      </span> -->
+    </div>
+    <hr>
+    <div class="form-control row">
+      <label for="Password">Password</label>
+      <input type="password" name="Password" formControlName="Password" placeholder="Password">
+      <!-- <span style="color: red" *ngIf="reactiveForm.get('password')?.hasError('required') && reactiveForm.get('password')?.touched">
+        Password is required
+      </span> -->
+      <!-- <span style="color: red" *ngIf="reactiveForm.get('password')?.hasError('minlength') && reactiveForm.get('password')?.touched">
+        Min length is 5
+      </span> -->
+    </div>
+  
+    <button type="submit">Log In</button>
+    <div class="social">
+      <div class="go"><i class="fab fa-google"></i> Google</div>
+      <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+    </div>
+  </form>
