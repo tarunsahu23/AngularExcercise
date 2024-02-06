@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,11 @@ export class AppComponent {
 
   islogedIn: boolean;
 
-  constructor() {
-    this.islogedIn = localStorage.getItem('isLoggedIn') === 'true';
+  constructor(private cookie: CookieService , private router: Router) {
+    this.islogedIn = cookie.get('isLoggedIn') === 'true';
     if (this.islogedIn) {
-      localStorage.removeItem('isLoggedIn');
-      localStorage.clear()
+    // Navigate to home page
+     this.router.navigate(['/home']);
     }
   }
 

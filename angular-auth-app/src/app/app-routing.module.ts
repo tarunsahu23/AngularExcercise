@@ -26,7 +26,7 @@ import { AuthGuard } from './guard/auth.guard'; // Update the import path
 import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotfoundcomponent.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] }, // Add canActivate guard
   { path: '**', component: PagenotfoundcomponentComponent },  // Wildcard route for a 404 page

@@ -101,10 +101,11 @@ export class LoginComponent {
         this.cookie.set("isLoggedIn", "true");
 
         // Set a flag in localStorage (as done in AuthService)
-        localStorage.setItem('isLoggedIn', 'true');
+        sessionStorage.setItem('isLoggedIn', 'true');
+        
 
-        // Clear the navigation history
-        this.location.replaceState('/home');
+        
+        // this.location.replaceState('/home');
         
         // Navigate to home page
         this.router.navigate(['/home']);
